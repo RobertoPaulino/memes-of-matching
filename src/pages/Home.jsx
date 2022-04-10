@@ -10,10 +10,6 @@ function Home() {
   const authToken = false;
   const [showAbout, setShowAbout] = useState(false);
 
-  function handleClick() {
-    console.log('clicked!');
-  }
-
   function aboutButton() {
     setShowAbout((prevState) => !prevState);
   }
@@ -24,7 +20,7 @@ function Home() {
       {showAbout ? (
         <About aboutButton={aboutButton} />
       ) : (
-        <Hero props={{ handleClick, authToken }} />
+        <Hero props={{ authToken }} />
       )}
       <Footer />
     </div>
